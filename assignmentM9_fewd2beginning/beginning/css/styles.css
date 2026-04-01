@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+a {
+    color: #e6a563;
+}
+a:hover {
+    opacity: 0.8;
+}
+h2 {
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+/**Header**/
+header {
+    background-color: #efefef;
+}
+header a {
+    text-decoration: none;
+    color: #000
+}
+header a:hover {
+    color: #e6a563;
+}
+header .container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .container a:first-child {
+    width: 250px;
+    margin-right: auto;
+
+}
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.button {
+    background-color: #e6a563;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.button:hover {
+    background-color: #fff;
+}
+nav li {
+    margin: 0 1em;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2em;
+}
+nav li a {
+    padding: 20px 0;
+}
+nav .btn {
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+nav .btn:hover {
+    background-color: transparent;
+}
+
+.sub-menu {
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #efefef;
+    border-radius: 20px;
+    padding: 10px 20px 20px 20px;
+    position: absolute;
+    left: 0;
+    width: 90px;
+    margin-top: 10px;
+    display: none;
+} 
+nav li:hover > .sub-menu {
+    display: flex;
+}
+.navToggler, .navTogglerMenu {
+    display: none;
+}
+
+
+/** Mobile Version**/
+@media (max-width: 768px) {
+   /** .navTogglerMenu {
+        display: block;
+        cursor: pointer;
+    }
+    .navTogglerMenu img {
+        width: 25px;
+    }
+    .menuClose {
+        display: none;
+    }
+    #navToggler:checked ~ .navTogglerMenu .menuOpen {
+        display: none;
+    }
+    #navToggler:checked ~ .navTogglerMenu .menuClose {
+        display: none;
+    }
+    nav {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left:0;
+        background-color: #efefef;
+    }
+    nav li {
+        text-align: right;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+    }
+    nav li a {
+        display: block;
+        padding: 20px;
+        width: 100%;
+    }
+    .sub-menu {
+        display: none;
+        background: #ddd;
+        padding-left: 20px;
+    }
+    li:focus-within .sub-menu {
+        display: block;
+    }
+
+}**/
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+    }
+    header nav ul {
+        flex-direction: column;
+        background-color: #efefef;
+        padding: 0;
+        gap: 0;
+        margin: 0;
+        border-top: 1px solid #fff;
+    }
+   header nav li {
+        text-align: right;
+        border-bottom: 1px solid #fff;
+        width: 100%;
+    }
+    nav li a {
+        display: block;
+        padding: 20px;
+        width: 100%;
+    }
+    nav .btn {
+        width: 100%;
+        border-radius: 0;
+        display: block;
+        padding: 20px;
+    }
+    header nav li:last-child {
+        padding: 0;
+    }
+    .sub-menu {
+        display: flex;
+        position: relative;
+        border-radius: 0;
+        width: 100%;
+        padding: 0;
+    }
+    .navTogglerMenu {
+        display: block;
+    }
+    .navTogglerMenu img {
+        width: 25px;
+    }
+    .menuOpen, nav, navToggler:checked ~ .navTogglerMenu .menuOpen {
+        display: none;
+    }
+    .menuClose, nav, navToggler:checked ~ .navTogglerMenu .menuClose {
+        display: block;
+    }    
+} 
+ 
